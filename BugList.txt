@@ -1,0 +1,2 @@
+Quantities of medicine are not being deducted even after print reciepts
+Returns are not being proceesed

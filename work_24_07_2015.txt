@@ -1,0 +1,22 @@
+Index Utility
+- Map generic names (read from an excel file) into the utillity to Product Names (loaded from an excel file)
+- Map product names read from a file to company name and information (read from another utiltiy)
+- Output these two separate indexes to another excel sheet
+
+
+Company Database Generation Utility
+- GUI to enter medicine entries of the format in pharma guide
+- Informatin to be entered for each medicine
+ * Drug Category
+ * Generic Name
+ * Contents
+ * Pack
+
+TD: 
+- 
+
+OQ: 
+- How to ease the shop database generation ? i.e., how to 
+
+
+

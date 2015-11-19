@@ -1,0 +1,35 @@
+Urgent  : 
+=======================
+VVUrgent:
+
+Database connection should be established once during load and re-used.
+
+Return receipts should be saved in database and testing of return receipts functionality
+Return receipt printing issue
+Salesman should login into the software and his name should be associated with sales
+Bulk purchases are to be handled as separate from loose purchases
+
+If user enters a medicine with lesser quantity than message should be shown that medicine is finished in stock
+Forms size should be based on screen resolution
+Stock updation before and after closing software
+Configurations etc
+Print receipt to match actual print receipt
+
+Important : 
+==============================
+License should be generated
+Database is to be replaced by MySQL
+Jars are to be signed
+When incomplete medicine name is typed, it should fill automatically
+Stock updation should be secure
+Installer
+Database should be secured
+Software should be licensed
+* Generate a profile of the machine
+* Based on the machine profile, generate a license key
+* Software would run only if the 
+Configurtion file is to be integrated .... medical store name should be read from it
+Racks functionality is to be corrected
+Database is to be replaced with MySQL
+Refactor code so that code for each Internal form is separate instead of all code in one MainFrame.java
+	

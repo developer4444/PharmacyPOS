@@ -1,0 +1,5 @@
+vendorname=Moon Medical Store
+vendoraddress=Azadi Chowk, 314-Main Ravi Road
+vendorcity=Lahore
+vendorphoneno=042-37726999
+vendorlicenseno=111-222-AAA

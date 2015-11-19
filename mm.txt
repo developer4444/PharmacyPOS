@@ -1,0 +1,6 @@
+Font size
+Window size
+Saving problem
+We should not press enter to enter medicinead
+Configurable discount
+Icon for printing receipt

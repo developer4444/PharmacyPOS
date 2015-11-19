@@ -1,0 +1,11 @@
+AbuSaad Tasks : 
+Correct the main use-case i.e., after adding a medicine in stock, it should be easily addable in the receipt.
+
+Class Modelling
+GUI
+Printer Interaction
+
+
+Hours Spent (Till 15th June) : 
+
+Customer Interaction  # 1

@@ -1,0 +1,52 @@
+[To be prioritized]
+
+Receipt clearance has to made faster. Some single method for clearing receipt. Or clear the current on top frame in a separate thread.
+
+Look and feel of Security Dialogs is to be improved
+Think about 
+When user presses enter on the login button, Login button press event should be generated
+CANCEL button on AddUserJFrame should work
+
+Proper Icons should be placed i.e., which show change in images
+Tooltips have to be added over icons.
+
+Proper titles have to be added for earch dialog box
+
+Layout of the security dialogs is to be improved
+
+Have the ability to be  multi-lingual i.e., show text in Urdu
+
+Save and Cancel button locations should be same on each dialog
+
+Login GUI is not opened at proper place
+Print receipt to be corrected
+Following boxes to be made searchable
+ * main medicine box
+ * company name
+ * distributor name
+Calendar to be added whereever, we are using date now
+Proper icon instead of java icon
+Help integration
+
+All internal frame title bars should be hidden
+Icons to be displayed on Menu bars
+All medcine boxes should be replaced by drop downs and dates by calendars
+
+Add graphs for showing sales progress over period of time
+Add analytics i.e., i am short on cash, what medicine sale is to be expected in the coming months
+I want to make purchases, which medicine would be most profitable
+
+Medicine Search Box and shortcuts for all options. All menu options should open up on the main frame.
+Change the dialog boxes to modal boxes
+Add proper GUI for add medicine in stock dialog box	
+Total price colour should be red
+Change Java Icon to display custom icon in its place
+Findout if urdu  news could be displayed in some bar
+Bydefault, after each user operation the cursor should move back to the medicine name text box.
+Ensure that medicine name and total fields take only normal space
+Add images to buttons to make them look more user friendly.
+Think about internationalization i.e., would a customer be interested in Urdu UI.
+For all the dialog boxes, proper captions should be added
+For a user which has to print 100's of receipt every day, what should the GUI be like. Read about face 3.0.
+Avoid the usage of mouse
+Support for help is to be added

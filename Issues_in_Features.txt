@@ -1,0 +1,153 @@
+TD : 
+Generation & Printing of reports
+* Daily Sales Report
+
+Report
+ daily sales
+ sale return
+ purchase daily
+ purchaes return
+ quotation
+ purchase orders 
+
+
+Addition of removal feature
+Medicine search name drop down
+Update stock of existing medicine
+Process medicine return
+Update stock/quantity after print of receipt
+
+
+Printing task
+Removal of medicine
+Database connection
+In/Out and Returns
+
+
+
+==========
+Usecases : 
+==========
+In (Enter in Stock)
+Sale
+* Add to receipt
+* Remove from receipt
+Out (Remove From Stock)
+Return
+Search
+*by name
+*
+Add items to an already existing stock
+Quick Drop Down Search for medicine items and short listing of matching  items as user types
+Option for security i.e., only administrator be allowed to perform certain operations
+Add demo option so that software is locked after specified time interval.
+
+Generate Reports : 
+================
+* Medicince in stock range
+* Medicine with expiry date in range
+* Sales for date
+
+Concepts : 
+============
+Medicine
+*Cost Price
+*Sales Price
+*Name
+*ExprityDate
+*Quantity
+*Company Name
+
+SaleReceipt
+*add medicine
+*remove medicine
+*compute total
+*Sales PersonName
+*print
+
+
+==============================
+Item delete
+Purchase
+Feed invoice
+Return feeded invoice
+Open purchases
+ Comany wise
+ Loose purchase
+ Purchase pack wise 
+ System prepare orders
+
+Stock
+ stock report 
+ gsk stock 
+ overall stock
+ stock register
+ history of a medicine from a particular date
+
+Short expiry date medicines for returns
+Sale report
+ customer wise all details what purchased
+ Sales of company
+ Sales of wrack
+ Net sales and profit
+ User wise/Account wise sales and return and discount etc.
+
+In daily sales
+Most customers dealt by user
+Invoice wise and time wise sales
+
+distributo columns
+company column
+
+Order Preparation
+ add distributor
+ add company
+ how much sale for this company
+
+Item Report
+
+history of  stock adjustment
+sale price difference
+
+Manage increase and decrease (sale without receipt or receipt without sales) .. stock adjustment
+ 
+
+Sales
+ Cash sale
+ Credit sale
+ Sale return
+ Billing serial umber
+ Credit sale return 
+ withou bill return
+
+Quotation
+
+Refused sale
+ Track record of which medicinces are not in slae
+  
+Users
+ administrator
+ sales man
+ Users Groups
+
+Maintenance
+ password settings
+ changing
+ preference
+  
+Check margin
+adjust margin
+adjust stock
+
+Change item discount
+Basic data
+
+Customer 
+Supplier
+Item
+Medicine location
+Distributor of medicine
+
+
+Print license number and store name on receipt
+Handle use case of multiple sales receipts

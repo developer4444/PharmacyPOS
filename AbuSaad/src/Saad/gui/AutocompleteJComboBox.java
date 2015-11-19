@@ -1,0 +1,175 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Saad.gui;
+
+import Saad.classmodel.Medicine;
+import java.awt.Component;
+import java.awt.Event;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentEvent.EventType;
+import javax.swing.event.DocumentListener;
+import javax.swing.text.JTextComponent;
+
+/**
+ *
+ * @author Pasha
+ */
+public class AutocompleteJComboBox extends JComboBox {
+private Searchable<String,String> searchable;
+public Map<String, Integer> founds;
+	/**
+	 * Constructs a new object based upon the parameter searchable
+	 * @param
+	 */
+        public AutocompleteJComboBox() {
+        }
+
+	public AutocompleteJComboBox(Searchable<String,String> s){
+		super();
+		this.searchable = s;
+		setEditable(true);
+		Component c = getEditor().getEditorComponent();
+		if ( c instanceof JTextComponent ){
+			final JTextComponent tc = (JTextComponent)c;
+
+			tc.getDocument().addDocumentListener(new DocumentListener(){
+				@Override
+				public void changedUpdate(DocumentEvent arg0) {
+                                }
+				@Override
+				public void insertUpdate(DocumentEvent arg0) {
+                                        EventType type = arg0.getType();
+					update();
+				}
+
+                                @Override
+				public void removeUpdate(DocumentEvent arg0) {
+                                        EventType type = arg0.getType();
+					update();
+				}
+
+				public void update(){
+                                     if(MainFrame.state == MainFrame.ITEM_SELECTED)
+                                     {
+                                         MainFrame.state = MainFrame.RECEIPT_IDLE;
+                                         return;
+                                     }
+                                    if(MainFrame.state == MainFrame.RECEIPT_PRINTED)
+                                    {
+                                        return;
+                                    }
+                                    //perform separately, as listener conflicts between the editing component
+					//and JComboBox will result in an IllegalStateException due to editing 
+					//the component when it is locked. 
+                                        MainFrame.state = MainFrame.MEDICINE_BEING_TYPED;
+					SwingUtilities.invokeLater(new Runnable(){
+						@Override
+						public void run() {
+                                                    founds = searchable.search(tc.getText());
+                                                    Set<String> foundSet = founds.keySet();
+
+                                                    // TODO : Find if sorting is required.
+                                                    //Collections.sort(foundSet);//sort alphabetically
+                                                    setEditable(false);
+                                                    removeAllItems();
+
+                                                    //if founds contains the search text, then only add once.
+                                                    if ( !foundSet.contains( tc.getText().toLowerCase()) ){
+                                                        addItem( tc.getText() );
+                                                    }
+
+                                                    for (String s : foundSet) {
+                                                            addItem(s);
+                                                    }
+                                                    if(MainFrame.state != MainFrame.ITEM_SELECTED)
+                                                    {
+                                                          setPopupVisible(true);
+                                                    }
+                                                    setEditable(true);                                                   
+                                                    tc.requestFocus();
+						}
+					});
+				}
+			});
+
+			//When the text component changes, focus is gained 
+			//and the menu disappears. To account for this, whenever the focus
+			//is gained by the JTextComponent and it has searchable values, we show the popup.
+			tc.addFocusListener(new FocusListener(){
+				@Override
+				public void focusGained(FocusEvent arg0) {
+                                        // TODO : Make a separate header file for defining all generic constants
+					if ( tc.getText().length() > 0 && MainFrame.state == MainFrame.MEDICINE_BEING_TYPED){
+                                            setPopupVisible(true);
+                                            tc.setCaretPosition(tc.getText().length()); 
+					}
+				}
+
+				@Override
+				public void focusLost(FocusEvent arg0) {						
+                                }
+			});
+
+                       /* tc.addKeyListener(new KeyListener() 
+                        {
+                            public void keyTyped(KeyEvent evt)
+                            {
+                                // TODO : Find if this event could be passed to MainFrame class so that all MainFrame. references could be avoided.
+                                if(evt.getKeyChar() == Event.ENTER)
+                                {
+                                    if(MainFrame.currentOnTopFrame.getTitle() == "receiptjframe")
+                                    {
+                                        // TODO : Both these methods don't belong in GUI code.
+                                        // They ought to be moved to Mainframe class.
+                                        MainFrame.enterPressedOnReceiptFrame();
+                                    }
+                                    else if(MainFrame.currentOnTopFrame.getTitle() == "updatestockjframe")
+                                    {
+                                        MainFrame.enterPressedOnUpdateStockFrame();
+                                    }
+                                }
+                            }
+
+                            public void keyReleased(KeyEvent e)
+                            {
+                            
+                            }
+
+                            public void keyPressed(KeyEvent e)
+                            {
+                            
+                            }
+                        });*/
+		}else{
+                    throw new IllegalStateException("Editing component is not a JTextComponent!");
+		}
+	}    
+
+
+
+    public void setSearchable(Searchable<String, String> s)
+    {
+        if(null != searchable)
+        {
+            searchable = null;
+        }
+        searchable = s;
+    }
+}

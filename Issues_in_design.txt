@@ -1,0 +1,7 @@
+Change the database to some faster database for e.g., mysql or what is the fastest free stable database available in market
+
+There should be some generic GUI controls which should then be reused. For e.g., for displaying sales receipt information there should be some generic control to which we would pass the sales receipt object and it would display relevant information.
+
+Construct packages for code. Separate GUI code from class model code.
+Think about using JAXB for filling GUIs from objects directly
+

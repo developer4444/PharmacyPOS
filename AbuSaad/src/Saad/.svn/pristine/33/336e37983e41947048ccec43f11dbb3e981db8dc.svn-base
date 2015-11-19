@@ -1,0 +1,87 @@
+package Saad.classmodel;
+
+import Saad.classmodel.Medicine;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+
+
+public class SalesReceipt {
+
+	private long salesReceiptID = 0;
+	private Date salesDate = new Date();
+	private String salesmanName;
+	//public HashMap<String,Medicine> medicineList = new HashMap<String,Medicine>();
+        public ArrayList<Medicine> medicineList = new ArrayList<Medicine>();
+
+	// TODO : Should we maintain any field for per medicine discount
+	public float totalPrice = 0;
+	public float overallDiscount = 0;
+
+        /*
+	public SalesReceipt(Date sDate, String smanName, ArrayList<Medicine> mList, long sReceiptID)
+	{
+		salesDate = sDate;
+		salesmanName = smanName;
+		medicineList = mList;
+		salesReceiptID = sReceiptID;
+	}
+        */
+	public SalesReceipt(Date sDate, String smanName, long sReceiptID)
+	{
+		salesDate = sDate;
+		salesmanName = smanName;
+		salesReceiptID = sReceiptID;
+	}
+
+	public SalesReceipt()
+	{
+		
+	}
+
+	public void addMedicineToList(Medicine saleMedicine)
+	{
+		//medicineList.put(saleMedicine.medicineName, saleMedicine);
+                medicineList.add(saleMedicine);
+	}
+
+	public void setTotalPrice(float totPrice)
+	{
+		totalPrice = totPrice;
+	}
+
+	public void setSalesDate(Date sDate)
+	{
+		salesDate = sDate;
+	}
+
+	public void setSalesManName(String smanName)
+	{
+		salesmanName = smanName;
+	}
+
+	public void setSalesReceiptID(long sReceiptID)
+	{
+		salesReceiptID = sReceiptID;
+	}
+
+	public Date getSalesDate()
+	{
+		return salesDate;
+	}
+
+	public String getSalesManName()
+	{
+		return salesmanName;
+	}
+	
+	public long getReceiptID()
+	{
+		return salesReceiptID;
+	}
+        
+        public float getTotalSales()
+        {
+            return totalPrice;
+        }
+}

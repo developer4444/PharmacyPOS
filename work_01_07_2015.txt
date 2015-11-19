@@ -1,0 +1,15 @@
+
+Total Sales in Date Range
+Total Sales by medicine
+Total Sales by company
+Total Sales by Salesman
+
+Total Returns by Date Range
+Total Returns by medicine
+Total Returns by company
+Total Returns by Salesman
+
+Short Items Overall
+Short Items by Company
+Short Medicines on Rack
+

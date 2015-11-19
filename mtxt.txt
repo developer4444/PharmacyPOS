@@ -1,0 +1,7 @@
+Crawler Implementation : 
+
+Get the pages from the pharma guide website one by one and save them on disk
+Parse each of these html/xml files to extract the following information from it
+- Medicine Name
+- Company Name
+- Generic Name

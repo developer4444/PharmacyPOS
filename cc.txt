@@ -1,0 +1,8 @@
+select info.SaleReceiptID, info.SalesmanName, info.SalesDate, info.TotalPrice, med.MedicineName, med.CompanyName, med.SalesPrice, med.CostPrice, med.Quantity, med.ExpiryDate, med.ManufacturingDate 
+
+from SalesInfo info, SalesReceiptInfo receiptinfo, Medicine med 
+
+where info.SaleReceiptID== receiptinfo.SaleReceiptID && med.MedicineID ==receiptInfo.MedicineID
+
+
+select info.SaleReceiptID, info.SalesmanName, info.SalesDate, info.TotalPrice, med.MedicineName, med.CompanyName, med.SalesPrice, med.CostPrice, med.Quantity, med.ExpiryDate, med.ManufacturingDate from SalesInfo info, SalesReceiptInfo receiptinfo, Medicine med where info.SaleReceiptID= receiptinfo.SaleReceiptID and med.MedicineID =receiptInfo.MedicineID

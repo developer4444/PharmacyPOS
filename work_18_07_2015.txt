@@ -1,0 +1,8 @@
+TD : 
+
+Extend the client to collect customer information
+Submit receipt information along with customer information  to the Server application
+
+
+
+OQ  : 

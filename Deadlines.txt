@@ -1,0 +1,48 @@
+Deadlines : 
+
+Challenge : Complete Test cases for Commercial Release
+
+One Core Feature Issue:
+* Return receipts in database
+ - Loading when software is started
+* Calendar
+* Database shift to MySQL
+
+* Databases bug i.e, when users and usergroups are removed, they are not removed from database.
+* Medical Store Name etc. from configurations
+* GUI transition delay issue
+* Check maximum medicines that can be added in receipt
+* Signing of the distributable jar file
+* Complete Licensing
+* Performance improvement of medicine search
+* Per-receipt discount has to be added
+* Support for graphs and analytics
+* Support or internationalization
+* Findout if bar-code readibility  is required by some vendors
+
+
+One Core Futuristic Feature (Vow Feature) Issue:
+* Mindmap of analytics
+* Mindmap of graphs
+
+One Core Present LookNFeel Issue:
+* More icons to be introduced
+* GUI layouts to be modernized
+* Integration of JIDE like GUI elements
+* Startup time to be improved
+
+One Core Futuristic LookNFeel Issue:
+* 
+
+
+Sunday - Fajar
+Sunday - Ishraq
+Sunday - Chast
+Sunday - Zuhar
+Sunday - Asar
+Sunday - Maghrib
+Sunday - Isha
+Sunday - Tahajud
+Monday - Fajar
+Monday - Zuhar (Commercial Release Insh-Allah)
+
